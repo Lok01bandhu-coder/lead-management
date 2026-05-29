@@ -1,0 +1,80 @@
+body {
+  background: linear-gradient(180deg, #f4f1ea 0%, #ffffff 45%);
+  color: #1f2328;
+}
+
+.app-header {
+  border-bottom: 1px solid #e7dfd1;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.btn-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}
+
+.btn-icon-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-weight: 500;
+}
+
+.toolbar-btn,
+.pagination-btn,
+.table-action-btn {
+  border-radius: 999px;
+}
+
+.toolbar-btn {
+  min-height: 2.75rem;
+}
+
+.pagination-btn {
+  min-width: 6.5rem;
+}
+
+.table-action-btn {
+  min-width: 5.5rem;
+}
+
+.btn-outline-primary.table-action-btn:hover,
+.btn-outline-danger.table-action-btn:hover,
+.btn-outline-dark.toolbar-btn:hover,
+.btn-outline-secondary.pagination-btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary.table-action-btn,
+.btn-outline-danger.table-action-btn,
+.btn-outline-dark.toolbar-btn,
+.btn-outline-secondary.pagination-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+}

@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: postgres-db
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: lead_management
+
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    container_name: fastapi-backend
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:root@db:5432/lead_management
+
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: react-frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
